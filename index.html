@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+    <title>Mars Explorer</title>
+    <link rel="stylesheet" href="/style1.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.8.5/d3.min.js"></script>
+    <script src="/atmosphere.js"></script>
+  </head>
+  <body>
+    <header>
+      <nav class="navbar">
+        <div class="navbar-logo">
+          <a href="#" class="logo-text">Data Visualization</a>
+        </div>
+        <ul class="nav-links">
+          <li><a href="/index.html" class="nav-link active">Home</a></li>
+          <li><a href="/datav.html" class="nav-link">Data Visuals</a></li>
+          <li><a href="/design.html" class="nav-link">Design</a></li>
+          <li><a href="/theory.html" class="nav-link">Theory</a></li>
+          <li><a href="/contact.html" class="nav-link">Contact</a></li>
+        </ul>
+        <div class="nav-toggle">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <section id="home">
+        <section id="home">
+          <div class="content">
+            <h1>MARS</h1>
+            <p class="subtitle">Mission: Making Life Multiplanetary</p>
+            <p class="description">
+              The fourth planet from the Sun, Mars is a dusty, cold, desert
+              world with a very thin atmosphere.
+            </p>
+            <button id="explore-btn" class="explore-btn">EXPLORE ></button>
+          </div>
+
+          <div class="mars-facts">
+            <div class="fact-item">
+              <h3>DISTANCE FROM SUN</h3>
+              <p id="distance">227.9 million km</p>
+            </div>
+            <div class="fact-item">
+              <h3>SURFACE TEMPERATURE</h3>
+              <p id="temperature">-63°C (avg)</p>
+            </div>
+            <div class="fact-item">
+              <h3>DAY LENGTH</h3>
+              <p id="sol">24h 37m</p>
+            </div>
+            <div class="fact-item">
+              <h3>MARTIAN YEAR</h3>
+              <p id="martian-year">687 Earth days</p>
+            </div>
+          </div>
+        </section>
+<!--About-->
+        <section id="about">
+          <h2>About Mars</h2>
+          <div class="info-cards">
+            <div class="card">
+              <h3>The Red Planet</h3>
+              <p>
+                Mars gets its red color from the iron oxide (rust) in its soil.
+                It's home to both the highest mountain and the deepest, longest
+                valley in the Solar System.
+              </p>
+            </div>
+            <div class="card">
+              <h3>Moons of Mars</h3>
+              <p>
+                Mars has two small moons, Phobos and Deimos. They're named after
+                the Greek mythological twin characters that accompanied their
+                father Ares into battle.
+              </p>
+            </div>
+            <div class="card">
+              <h3>Water on Mars</h3>
+              <p>
+                While Mars has no liquid water on its surface today, there is
+                evidence that it once had a vast ocean covering much of its
+                northern hemisphere.
+              </p>
+            </div>
+          </div>
+        </section>
+ <!--Mars weather Guide-->
+        <section id="weather-guide">
+          <h2>Mars Weather Guide</h2>
+          <div class="guide-content">
+            <div class="guide-item">
+              <h3>About This Data</h3>
+              <p>
+                This website provides the latest weather data from NASA's
+                InSight Mars lander. The data is collected at Elysium Planitia,
+                a flat, smooth plain near Mars' equator.
+              </p>
+            </div>
+            <div class="guide-item">
+              <h3>Understanding the Terms</h3>
+              <ul>
+                <li>
+                  <strong>Sol:</strong> A Martian day, which is about 24 hours
+                  and 39 minutes long.
+                </li>
+                <li>
+                  <strong>Temperature:</strong> Measured in Celsius, showing
+                  average, minimum, and maximum for each sol.
+                </li>
+                <li>
+                  <strong>Pressure:</strong> Atmospheric pressure on Mars,
+                  measured in Pascals (Pa).
+                </li>
+                <li>
+                  <strong>Wind Speed:</strong> Measured in meters per second
+                  (m/s).
+                </li>
+              </ul>
+            </div>
+            <div class="guide-item">
+              <h3>Reading the Graphs</h3>
+              <p>
+                Each graph shows data over the last seven sols (Martian days):
+              </p>
+              <ul>
+                <li>
+                  <strong>Temperature Graph:</strong> The red bars show average
+                  temperatures, with error bars indicating the minimum and
+                  maximum temperatures for each sol.
+                </li>
+                <li>
+                  <strong>Wind Speed Graph:</strong> This graph displays average
+                  wind speeds for each sol.
+                </li>
+                <li>
+                  <strong>Pressure Graph:</strong> The line graph shows how
+                  atmospheric pressure changes over time.
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        <section id="atmospheric-analysis" class="section">
+          <h2>Atmospheric Analysis</h2>
+      
+          <div class="atmosphere-dashboard">
+              <div class="dashboard-header">
+                  <div class="view-controls">
+                      <button class="view-btn active">
+                          Composition
+                      </button>
+                      <button class="view-btn">
+                          Earth Comparison
+                      </button>
+                      <button class="view-btn">
+                          Seasonal Variation
+                      </button>
+                  </div>
+      
+                  <div class="filter-control">
+                      
+                          Filter (%): <span class="filter-value">1%</span>
+                    
+                  </div>
+              </div>
+      
+              <div class="dashboard-content">
+                  <div class="visualization-panel">
+                      <div id="composition-chart" class="chart-container"></div>
+                  </div>
+      
+                  <div class="details-panel">
+                      <div class="gas-details">
+                          <h3>Gas Details</h3>
+                          <div id="gasInfo" class="gas-info">
+                              <p>Select a gas to view details</p>
+                          </div>
+                      </div>
+      
+                      <div id="gas-list" class="gas-list">
+                          <!-- Gas list items will be populated by JavaScript -->
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </section>
+
+        <!-- Footer -->
+    <footer class="bg-gray-900 border-t border-gray-800 mt-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div>
+                    <h4 class="text-lg font-semibold text-gray-100 mb-4">About Mars Explorer</h4>
+                    <p class="text-gray-400">
+                        Dedicated to providing accurate and up-to-date information about the Martian environment.
+                    </p>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold text-gray-100 mb-4">Quick Links</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="#" class="hover:text-gray-200">Weather Data</a></li>
+                        <li><a href="#" class="hover:text-gray-200">Atmospheric Analysis</a></li>
+                        <li><a href="#" class="hover:text-gray-200">Research Papers</a></li>
+                        <li><a href="#" class="hover:text-gray-200">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold text-gray-100 mb-4">Data Sources</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li>NASA Mars Weather Service</li>
+                        <li>ESA Mars Express</li>
+                        <li>Mars Science Laboratory</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="mt-8 pt-8 border-t border-gray-800 text-center text-gray-400">
+                <p>&copy; 2024 Mars Explorer. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

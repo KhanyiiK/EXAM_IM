@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mars Explorer</title>
+    <link rel="stylesheet" href="/style1.css">
+    <link rel="stylesheet" href="/script.js">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="navbar-logo">
+                <a href="#" class="logo-text">MARS EXPLORER</a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="/index.html" class="nav-link active">Home</a></li>
+                <li><a href="/datav.html" class="nav-link">Data Visuals</a></li>
+                <li><a href="/design.html" class="nav-link">Design</a></li>
+                <li><a href="/theory.html" class="nav-link">Theory</a></li>
+                <li><a href="/contact.html" class="nav-link">Contact</a></li>
+              </ul>
+            <div class="nav-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+            <div class="page">
+                <main class="contact-main">
+                    <div class="contact-full">
+                        <div class="contact-section">
+                            <h1>Get in Touch</h1>
+                            <div class="border-line"></div>
+                            <p class="contact-intro">Reach out to connect, collaborate, or ask any questions.</p>
+                            <div class="cs-item email">
+                                <div class="icon"><i class="fas fa-envelope"></i></div>
+                                <div class="text">
+                                    <div class="placeHolder">E-mail</div>
+                                    <div class="info">MarsExplorer@gmail.com</div>
+                                </div>
+                            </div>
+                            <div class="cs-item number">
+                                <div class="icon"><i class="fas fa-phone"></i></div>
+                                <div class="text">
+                                    <div class="placeHolder">Phone</div>
+                                    <div class="info">+27 672 951 2234</div>
+                                </div>
+                            </div>
+                            <div class="cs-item address">
+                                <div class="icon"><i class="fas fa-map-marker-alt"></i></div>
+                                <div class="text">
+                                    <div class="placeHolder">Address</div>
+                                    <div class="info">Johannesburg, South Africa</div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <section class="contact-form">
+                            <h1>Contact Me</h1>
+                            <div class="border-line"></div>
+                            <form id="contact-form" class="form-section" novalidate>
+                                <div class="form-group">
+                                    <label for="name">Name</label>
+                                    <input type="text" id="name" name="name" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="email">Email</label>
+                                    <input type="email" id="email" name="email" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="message">Message</label>
+                                    <textarea id="message" name="message" rows="5" required></textarea>
+                                </div>
+                                <div class="error"><i class="fa-solid fa-circle-xmark error-icon"></i>Please fill out all fields</div>
+                                <div class="email-error"><i class="fa-solid fa-circle-xmark error-icon"></i>Email address is not valid</div>
+                                <button type="submit" id="contact-submit" class="contact-button">
+                                    <div class="contact-load">
+                                        <div class="line"></div>
+                                        <div class="line"></div>
+                                        <div class="line"></div>
+                                    </div>
+                                    <div class="submit-text">Submit</div>
+                                </button>
+                            </form>
+                        </section>
+                    </div>
+                </main>
+    <!-- Footer -->
+    <footer class="bg-gray-900 border-t border-gray-800 mt-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div>
+                    <h4 class="text-lg font-semibold text-gray-100 mb-4">About Mars Explorer</h4>
+                    <p class="text-gray-400">
+                        Dedicated to providing accurate and up-to-date information about the Martian environment.
+                    </p>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold text-gray-100 mb-4">Quick Links</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="#" class="hover:text-gray-200">Weather Data</a></li>
+                        <li><a href="#" class="hover:text-gray-200">Atmospheric Analysis</a></li>
+                        <li><a href="#" class="hover:text-gray-200">Research Papers</a></li>
+                        <li><a href="#" class="hover:text-gray-200">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold text-gray-100 mb-4">Data Sources</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li>NASA Mars Weather Service</li>
+                        <li>ESA Mars Express</li>
+                        <li>Mars Science Laboratory</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="mt-8 pt-8 border-t border-gray-800 text-center text-gray-400">
+                <p>&copy; 2024 Mars Explorer. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
+        

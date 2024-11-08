@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mars Explorer</title>
+    <link rel="stylesheet" href="/style1.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    
+    <script src="/script.js"></script>
+    
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="navbar-logo">
+                <a href="#" class="logo-text">MARS EXPLORER</a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="/index.html" class="nav-link active">Home</a></li>
+                <li><a href="/datav.html" class="nav-link">Data Visuals</a></li>
+                <li><a href="/design.html" class="nav-link">Design</a></li>
+                <li><a href="/theory.html" class="nav-link">Theory</a></li>
+                <li><a href="/contact.html" class="nav-link">Contact</a></li>
+              </ul>
+            <div class="nav-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home">
+            <div class="content">
+                <h1>Data Visualisations</h1>
+                <p class="subtitle">Data Visualization</p>
+                <p class="description">Explore dynamic visualizations that showcase data on Mars’s geography, atmosphere, and climate. Dive deep into a data-driven perspective of the Red Planet to uncover its mysteries.</p>
+                <button class="explore-btn">EXPLORE ></button>
+            </div>
+            <div class="mars-facts">
+                <div class="fact-item">
+                    <h3>DIAMETER</h3>
+                    <p>6,792 KM</p>
+                </div>
+                <div class="fact-item">
+                    <h3>ORBIT PERIOD</h3>
+                    <p>687 DAYS</p>
+                </div>
+                <div class="fact-item">
+                    <h3>SURFACE TEMP</h3>
+                    <p>-63°C</p>
+                </div>
+                <div class="fact-item">
+                    <h3>MOONS</h3>
+                    <p>2</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="weather">
+            <h2>Mars Weather Dashboard</h2>
+            <div id="weather-container">
+                <div id="loading">Loading Mars weather data...</div>
+                
+                <div id="weather-error" style="display: none">
+                    Unable to fetch Mars weather data. Please try again later.
+                </div>
+
+                <div id="weather-dashboard" style="display: none">
+                    <div class="dashboard-header">
+                        <div id="current-sol"></div>
+                        <div id="date-selector">
+                            <button id="prev-sol">◀</button>
+                            <span id="current-earth-date"></span>
+                            <button id="next-sol">▶</button>
+                        </div>
+                        <div id="current-season"></div>
+                    </div>
+
+                    <div class="dashboard-grid">
+                        <div id="temperature-card" class="dashboard-card">
+                            <h3>Temperature</h3>
+                            <div id="avg-temp" class="main-value"></div>
+                            <div class="sub-values">
+                                <span id="min-temp"></span> | <span id="max-temp"></span>
+                            </div>
+                            <div id="temp-chart" class="chart-container"></div>
+                        </div>
+
+                        <div id="wind-card" class="dashboard-card">
+                            <h3>Wind</h3>
+                            <div id="wind-speed" class="main-value"></div>
+                            <div id="wind-direction-display"></div>
+                            <div id="wind-speed-chart" class="chart-container"></div>
+                            <!-- <div id="wind-rose" class="chart-container"></div> -->
+                        </div>
+
+                        <div id="pressure-card" class="dashboard-card">
+                            <h3>Atmospheric Pressure</h3>
+                            <div id="pressure" class="main-value"></div>
+                            <div id="pressure-chart" class="chart-container"></div>
+                        </div>
+                    </div>
+
+                    <div id="info-card" class="dashboard-card">
+                        <h3>Mars Weather Facts</h3>
+                        <div id="info-content" class="info-grid">
+                            <div id="temperature-info" class="info-item">
+                                <h4>Temperature</h4>
+                                <p>Mars is much colder than Earth due to its thin atmosphere and greater distance from the Sun.</p>
+                            </div>
+                            <div id="atmosphere-info" class="info-item">
+                                <h4>Atmosphere</h4>
+                                <p>The Martian atmosphere is primarily composed of carbon dioxide (95%), nitrogen (3%), and argon (1.6%).</p>
+                            </div>
+                            <div id="pressure-info" class="info-item">
+                                <h4>Pressure</h4>
+                                <p>Atmospheric pressure on Mars is less than 1% of Earth's average sea-level pressure.</p>
+                            </div>
+                            <div id="seasons-info" class="info-item">
+                                <h4>Seasons</h4>
+                                <p>Mars experiences seasons similar to Earth, but they last about twice as long due to Mars' longer year.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        
+    </main>
+        <!-- Footer -->
+        <footer class="bg-gray-900 border-t border-gray-800 mt-12">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div>
+                        <h4 class="text-lg font-semibold text-gray-100 mb-4">About Mars Explorer</h4>
+                        <p class="text-gray-400">
+                            Dedicated to providing accurate and up-to-date information about the Martian environment.
+                        </p>
+                    </div>
+                    <div>
+                        <h4 class="text-lg font-semibold text-gray-100 mb-4">Quick Links</h4>
+                        <ul class="space-y-2 text-gray-400">
+                            <li><a href="#" class="hover:text-gray-200">Weather Data</a></li>
+                            <li><a href="#" class="hover:text-gray-200">Atmospheric Analysis</a></li>
+                            <li><a href="#" class="hover:text-gray-200">Research Papers</a></li>
+                            <li><a href="#" class="hover:text-gray-200">Contact</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="text-lg font-semibold text-gray-100 mb-4">Data Sources</h4>
+                        <ul class="space-y-2 text-gray-400">
+                            <li>NASA Mars Weather Service</li>
+                            <li>ESA Mars Express</li>
+                            <li>Mars Science Laboratory</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="mt-8 pt-8 border-t border-gray-800 text-center text-gray-400">
+                    <p>&copy; 2024 Mars Explorer. All rights reserved.</p>
+                </div>
+            </div>
+        </footer>
+    </body>
+    </html>
+    
+    
+</body>
+</html>
