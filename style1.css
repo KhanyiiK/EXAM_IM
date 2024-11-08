@@ -137,7 +137,7 @@ section {
 /* Home section styles */
 #home {
   /* Updated to reference from root directory */
-  background-image: url("mars-bg1.png");
+  background-image: url("/mars-bg1.png");
   /* Fallback background color */
   background-color: #0c0c0c;
   background-size: cover;
